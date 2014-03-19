@@ -69,10 +69,10 @@ EnterThumb(hfs_payload_entry)
  */
 EnterARM(Leet_hax)
     /* Prologue for the kernel code. */
-    stmfd   sp!, {r4-r7,pc}
+    stmfd   sp!, {r4-r7,lr}
 
     /* Establish a frame pointer. */
-    add     r7, sp, #4
+    add     r7, sp, #8
 
     /* Mask off all interrupts to prevent interferences. */
     mrs     r7, cpsr
